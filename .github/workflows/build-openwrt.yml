@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://git.archive.openwrt.org/14.07/packages.git
+  REPO_URL: git://git.archive.openwrt.org/14.07/packages.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
