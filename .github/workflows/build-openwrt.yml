@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/haoranzeus/openwrt1505
+  REPO_URL: https://github.com/yanjixing/openwrt
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
@@ -57,9 +57,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        git clone $REPO_URL
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        make download V=s
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
