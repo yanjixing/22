@@ -68,7 +68,7 @@ jobs:
     
     - name: Install dl
       run: cd openwrt && mget https://codeload.github.com/yanjixing/dl/zip/master	    
-	   unzip -d /dl master
+           unzip -d /dl master
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
