@@ -72,7 +72,7 @@ jobs:
         cd openwrt
         wget https://codeload.github.com/TOLQY/openwrt-lede-dl/zip/master
         mkdir dl
-        unzip -d /dl master
+        unzip -o master -d dl/
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
