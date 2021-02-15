@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: git://git.openwrt.org/14.07/openwrt.git
+  REPO_URL: https://git.archive.openwrt.org/14.07/openwrt.git
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
