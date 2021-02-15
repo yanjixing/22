@@ -70,7 +70,7 @@ jobs:
       id: dl
       run: |
         cd openwrt
-        wget https://codeload.github.com/yanjixing/dl/zip/master
+        wget https://codeload.github.com/TOLQY/openwrt-lede-dl/zip/master
         mkdir dl
         unzip -d /dl master
 
