@@ -70,7 +70,7 @@ jobs:
       id: dl
       run: |
         cd openwrt
-        mget https://codeload.github.com/yanjixing/dl/zip/master
+        wget https://codeload.github.com/yanjixing/dl/zip/master
         unzip -d /dl master
 
     - name: SSH connection to Actions
