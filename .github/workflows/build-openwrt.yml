@@ -74,7 +74,7 @@ jobs:
         wget https://codeload.github.com/yanjixing/dl/zip/master
         mkdir dl
         unzip -j master -d dl/
-        cp ./work/22/22/diy-part1.sh tools/mkimage/patches
+        cp ~/work/22/22/210-openssl-1.1.x-compat.patch tools/mkimage/patches
     
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
