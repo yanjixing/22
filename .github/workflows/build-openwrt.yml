@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/yanjixing/14.7
+  REPO_URL: https://github.com/yanjixing/14.7.git
   REPO_BRANCH: openwrt-14.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
