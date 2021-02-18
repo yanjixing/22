@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: 	https://git.archive.openwrt.org/15.05/openwrt.git
+  REPO_URL: https://github.com/powerwheel/openwrt14.07.git
   REPO_BRANCH: openwrt-15.05
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
