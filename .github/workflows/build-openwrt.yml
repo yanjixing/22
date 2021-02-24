@@ -59,7 +59,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL openwrt
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     
     - name: Load custom feeds
@@ -75,14 +75,14 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: Install dl
-      id: dl
-      run: |
-        cd openwrt
-        wget https://codeload.github.com/yanjixing/dl/zip/master
-        mkdir dl
-        unzip -j master -d dl/
-        cp ~/work/22/22/210-openssl-1.1.x-compat.patch tools/mkimage/patches
+    #- name: Install dl
+    #  id: dl
+    #  run: |
+    #    cd openwrt
+     #   wget https://codeload.github.com/yanjixing/dl/zip/master
+     #   mkdir dl
+     #   unzip -j master -d dl/
+     #   cp ~/work/22/22/210-openssl-1.1.x-compat.patch tools/mkimage/patches
     
     - name: Load custom configuration
       run: |
