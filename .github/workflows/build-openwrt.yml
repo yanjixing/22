@@ -22,11 +22,11 @@ on:
 env:
   REPO_URL: https://github.com/Lienol/openwrt.git
   REPO_BRANCH: openwrt
-  FEEDS_CONF: feeds.conf.default
+  #FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  OPENSSL: 210-openssl-1.1.x-compat.patch
+  #OPENSSL: 210-openssl-1.1.x-compat.patch
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
