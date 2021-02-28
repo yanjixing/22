@@ -38,7 +38,6 @@ jobs:
       run: |
         cd /opt/rt-n56u/trunk
         for m in $TNAME;
-        do
         if [ ! -f configs/templates/$m.config ] ; then
         echo "configs/templates/$m.config not found "
         exit 1
