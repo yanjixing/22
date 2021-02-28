@@ -38,6 +38,7 @@ jobs:
       run: |
         cd /opt/rt-n56u/trunk
         for m in $TNAME;
+        do
         if [ ! -f configs/templates/$m.config ] ; then
         echo "configs/templates/$m.config not found "
         exit 1
@@ -95,9 +96,19 @@ jobs:
         sudo ./clear_tree
         sudo ./build_firmware_modify $m 0
         sudo mv -f images/*.trx /opt/images/
-    - name : Upload packages
+        done
+    - name: Upload binaries to release
       uses: actions/upload-artifact@master
-      if: always()
       with:
-        name: Padavan-packages
-        path: /opt/images
+        repo_token: ${{ secrets.R_TOKEN }}
+        file: /opt/images/*.trx
+        tag: AtuoBuild
+        overwrite: true
+        file_glob: true
+    - uses: actions/upload-artifact@master
+      with:
+       bodyFile: "changelog.md"
+       tag: AtuoBuild
+       allowUpdates: true
+       name: Padavan-firmware
+       token: ${{ secrets.R_TOKEN }}
